@@ -15,4 +15,12 @@ public class ArmyRunnable implements Runnable {
         }
         System.out.println(Thread.currentThread().getName()+"结束了战斗");
     }
+
+    public boolean isKeepRunning() {
+        return keepRunning;
+    }
+
+    public void setKeepRunning(boolean keepRunning) {
+        this.keepRunning = keepRunning;
+    }
 }
