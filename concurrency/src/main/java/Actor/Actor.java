@@ -5,11 +5,11 @@ package Actor;
  */
 public class Actor extends Thread {
     public void run() {
-        System.out.println(getName() + "ÊÇÒ»¸öÑİÔ±");
+        System.out.println(getName() + "æ˜¯ä¸€ä¸ªæ¼”å‘˜");
         int count = 0;
         boolean keepRunning = true;
         while (keepRunning) {
-            System.out.println(getName() + "µÇÌ¨Ñİ³ö£º" + (++count));
+            System.out.println(getName() + "ç™»å°æ¼”å‡º" + (++count));
             if (count == 100)
                 keepRunning = false;
             if (count % 10 == 0)
@@ -20,7 +20,7 @@ public class Actor extends Thread {
                 }
         }
 
-        System.out.println(getName() + "µÄÑİ³ö½áÊøÁË£¡");
+        System.out.println(getName() + "è¡¨æ¼”ç»“æŸ");
     }
 
     public static void main(String[] args) {
@@ -35,11 +35,11 @@ public class Actor extends Thread {
 class Actress implements Runnable{
 
     public void run() {
-        System.out.println(Thread.currentThread().getName()+ "ÊÇÒ»¸öÑİÔ±");
+        System.out.println(Thread.currentThread().getName()+ "æ˜¯ä¸€ä¸ªæ¼”å‘˜");
         int count = 0;
         boolean keepRunning = true;
         while (keepRunning) {
-            System.out.println(Thread.currentThread().getName() + "µÇÌ¨Ñİ³ö£º" + (++count));
+            System.out.println(Thread.currentThread().getName() + "ç™»å°æ¼”å‡º" + (++count));
             if (count == 100)
                 keepRunning = false;
             if (count % 10 == 0)
@@ -50,6 +50,6 @@ class Actress implements Runnable{
                 }
         }
 
-        System.out.println(Thread.currentThread().getName() + "µÄÑİ³ö½áÊøÁË£¡");
+        System.out.println(Thread.currentThread().getName() + "æ¼”å‡ºç»“æŸ");
     }
 }
