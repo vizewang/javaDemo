@@ -34,13 +34,14 @@ public class Stage extends Thread {
         }
 
         System.out.println("正当双方激战正酣，半路杀出个程咬金");
-        Thread mrCheng=new KeyPersonThread();
+        Thread mrCheng = new KeyPersonThread();
         mrCheng.setName("程咬金");
         System.out.println("程咬金的理想就是结束战争，使百姓安居乐业");
 
-        armyTaskOfSuiDynasty.setKeepRunning(false);
-        armyTaskOfRevolt.setKeepRunning(false);
-
+//        armyTaskOfSuiDynasty.setKeepRunning(false);
+//        armyTaskOfRevolt.setKeepRunning(false);
+        armyOfSuiDynasty.stop();
+        armyOfRevolt.stop();
 
         try {
             Thread.sleep(2000);
