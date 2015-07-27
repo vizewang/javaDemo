@@ -11,6 +11,7 @@
     <modules>
         <module>concurrency</module>
         <module>tijDemo</module>
+        <module>effectiveJava</module>
     </modules>
 
 
