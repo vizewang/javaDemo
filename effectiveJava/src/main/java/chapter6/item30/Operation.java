@@ -6,22 +6,22 @@ import java.util.Map;
 
 public enum Operation {
 	PLUS("+") {
-		double apply(double x, double y) {
+		double applyT(double x, double y) {
 			return x + y;
 		}
 	},
 	MINUS("-") {
-		double apply(double x, double y) {
+		double applyT(double x, double y) {
 			return x - y;
 		}
 	},
 	TIMES("*") {
-		double apply(double x, double y) {
+		double applyT(double x, double y) {
 			return x * y;
 		}
 	},
 	DIVIDE("/") {
-		double apply(double x, double y) {
+		double applyT(double x, double y) {
 			return x / y;
 		}
 	};
@@ -36,7 +36,7 @@ public enum Operation {
 		return symbol;
 	}
 
-	abstract double apply(double x, double y);
+	abstract double applyT(double x, double y);
 
 	// Implementing a fromString method on an enum type - Page 154
 	private static final Map<String, Operation> stringToEnum = new HashMap<String, Operation>();
@@ -52,9 +52,10 @@ public enum Operation {
 
 	// Test program to perform all operations on given operands
 	public static void main(String[] args) {
-		double x = Double.parseDouble(args[0]);
-		double y = Double.parseDouble(args[1]);
+		double x = 10;
+		double y = 5;
+		System.out.println(valueOf(Operation.MINUS.toString()));
 		for (Operation op : Operation.values())
-			System.out.printf("%f %s %f = %f%n", x, op, y, op.apply(x, y));
+			System.out.printf("%f %s %f = %f%n", x, op, y, op.applyT(x, y));
 	}
 }
