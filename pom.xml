@@ -13,6 +13,7 @@
         <module>tijDemo</module>
         <module>effectiveJava</module>
         <module>designmode</module>
+        <module>regularexpression</module>
     </modules>
 
 
