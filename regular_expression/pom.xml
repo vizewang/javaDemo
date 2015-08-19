@@ -9,8 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>designmode</artifactId>
-
+    <artifactId>regular_expression</artifactId>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -18,5 +17,6 @@
             <version>4.12</version>
         </dependency>
     </dependencies>
+
 
 </project>
