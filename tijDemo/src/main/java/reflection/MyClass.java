@@ -6,28 +6,26 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
- * Created by weizwang on 2015/8/10.
+ * Created by weizwang on 2015/10/10.
  */
 public class MyClass {
     public int count;
-    public MyClass(int start){
-        count=start;
+    public MyClass(int start) {
+        count = start;
     }
-    public void increase(int step){
-        count+=step;
+    public void increase(int step) {
+        count = count + step;
     }
 
     public static void main(String[] args) {
-        MyClass myClass=new MyClass(0);
-        myClass.increase(2);
-        System.out.println("Normal->" + myClass.count);
         try {
             Constructor constructor=MyClass.class.getConstructor(int.class);
-            MyClass myClassReflect= (MyClass) constructor.newInstance(10);
+            MyClass myClass= (MyClass) constructor.newInstance(10);
             Method method=MyClass.class.getMethod("increase", int.class);
-            method.invoke(myClassReflect,5);
+            method.invoke(myClass, 5);
             Field field=MyClass.class.getField("count");
-            System.out.println("Reflect->"+field.getInt(myClassReflect));
+            System.out.println( field.getName());
+            System.out.println(field.getType());
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
