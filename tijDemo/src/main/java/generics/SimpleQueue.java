@@ -1,5 +1,5 @@
 package generics;//: generics/SimpleQueue.java
-// A different kind of container that is Iterable
+// A different kind of containers that is Iterable
 
 import java.util.Iterator;
 import java.util.LinkedList;
