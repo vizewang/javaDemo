@@ -2,7 +2,7 @@
 // "Flyweight" Maps and Lists of sample data.
 package net.mindview.util;
 import java.util.*;
-import static net.mindview.util.Print.*;
+
 import static net.mindview.util.Print.print;
 
 public class Countries {
