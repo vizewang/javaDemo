@@ -1,8 +1,5 @@
 package com.vize.javaDemo.designmode.proxy;
 
-import jdk.management.resource.internal.inst.SocketOutputStreamRMHooks;
-
-import javax.sound.midi.Soundbank;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
