@@ -43,7 +43,7 @@ public class Channel {
         notifyAll();
     }
 
-    public Request takeRequest() {
+    public synchronized Request takeRequest() {
         while (count <= 0) {
             try {
                 wait();
