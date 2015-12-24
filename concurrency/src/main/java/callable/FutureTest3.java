@@ -11,19 +11,20 @@ public class FutureTest3 {
     public static class Task implements Callable<String>{
 
         public String call() throws Exception {
+            Thread.sleep(1000);
             System.out.println("do task---"+Thread.currentThread().getName());
             return "call back result";
         }
     }
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        List<Future<String>> futures=new ArrayList<Future<String>>();
-        ExecutorService es= Executors.newCachedThreadPool();
-        for(int i=0;i<100;i++){
-            futures.add(es.submit(new Task()));
+
+        FutureTask<String> task=new FutureTask<String>(new Task());
+        try {
+           new Thread(task).start();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        for(Future<String>f:futures){
-            System.out.println(f.get());
-        }
+        System.out.println("end");
     }
 }
