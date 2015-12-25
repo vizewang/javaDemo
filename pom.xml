@@ -12,7 +12,7 @@
         <module>concurrency</module>
         <module>tijDemo</module>
         <module>effectiveJava</module>
-        <module>designmode</module>
+        <module>designPattern</module>
         <module>junitDemo</module>
         <module>xmlDemo</module>
         <module>regular_expression</module>
