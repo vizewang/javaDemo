@@ -11,7 +11,7 @@ public class FutureTest3 {
     public static class Task implements Callable<String>{
 
         public String call() throws Exception {
-            Thread.sleep(1000);
+            Thread.sleep(100000);
             System.out.println("do task---"+Thread.currentThread().getName());
             return "call back result";
         }
