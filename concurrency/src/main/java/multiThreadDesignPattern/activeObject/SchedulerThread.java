@@ -10,14 +10,14 @@ public class SchedulerThread extends Thread {
         this.queue = queue;
     }
 
-    public void invoke(MethodRequest request) {
+    public void invoke(MethodRequest request){
         queue.putRequest(request);
     }
 
     public void run() {
-        while (true) {
-            MethodRequest request = queue.takeRequest();
-            request.execute();
-        }
+    while (true){
+        MethodRequest request=queue.takeRequest();
+        request.execute();
+    }
     }
 }
