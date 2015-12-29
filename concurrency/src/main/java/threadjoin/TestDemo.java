@@ -50,7 +50,10 @@ public class TestDemo {
             bt.start();
             Thread.sleep(2000);
             at.start();
+            System.out.println("at join");
             at.join();
+            System.out.println("bt join");
+            bt.join();
         } catch (Exception e) {
             System.out.println("Exception from main");
         }
