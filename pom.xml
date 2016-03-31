@@ -18,6 +18,7 @@
         <module>xmlDemo</module>
         <module>regular_expression</module>
         <module>commonDemo</module>
+        <module>jvm</module>
     </modules>
 
 
