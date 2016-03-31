@@ -10,12 +10,14 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>concurrency</module>
+        <module>json</module>
         <module>tijDemo</module>
         <module>effectiveJava</module>
         <module>designPattern</module>
         <module>junitDemo</module>
         <module>xmlDemo</module>
         <module>regular_expression</module>
+        <module>commonDemo</module>
     </modules>
 
 
