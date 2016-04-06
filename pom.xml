@@ -20,6 +20,7 @@
         <module>commonDemo</module>
         <module>jvm</module>
         <module>mybatisDemo</module>
+        <module>networkDemo</module>
     </modules>
 
 
